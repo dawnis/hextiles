@@ -1,4 +1,4 @@
-package com.dds
+package com.dds.hexagons
 
 class hexagon {
 
@@ -31,6 +31,10 @@ class hexagon {
 
   def distance_to(hexb: hexagon): Int  = {
     (this - hexb).len()
+  }
+
+  def neighbor(direction: Int): hexagon = {
+    this + getDirection(direction)
   }
 
 }
